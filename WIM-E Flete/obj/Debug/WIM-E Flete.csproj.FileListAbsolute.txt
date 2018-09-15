@@ -1,0 +1,32 @@
+C:\Users\Grover Irusta\documents\visual studio 2013\Projects\WIM-E Flete\WIM-E Flete\bin\Debug\WIM-E Flete.exe
+C:\Users\Grover Irusta\documents\visual studio 2013\Projects\WIM-E Flete\WIM-E Flete\bin\Debug\WIM-E Flete.exe.config
+C:\Users\Grover Irusta\documents\visual studio 2013\Projects\WIM-E Flete\WIM-E Flete\obj\Debug\WIM_E_Flete.FechaPedidoForm.resources
+C:\Users\Grover Irusta\documents\visual studio 2013\Projects\WIM-E Flete\WIM-E Flete\obj\Debug\WIM_E_Flete.Form1.resources
+C:\Users\Grover Irusta\documents\visual studio 2013\Projects\WIM-E Flete\WIM-E Flete\obj\Debug\WIM_E_Flete.ItemForm.resources
+C:\Users\Grover Irusta\documents\visual studio 2013\Projects\WIM-E Flete\WIM-E Flete\obj\Debug\WIM_E_Flete.PedidoForm.resources
+C:\Users\Grover Irusta\documents\visual studio 2013\Projects\WIM-E Flete\WIM-E Flete\obj\Debug\WIM_E_Flete.PedidoProductoForm.resources
+C:\Users\Grover Irusta\documents\visual studio 2013\Projects\WIM-E Flete\WIM-E Flete\obj\Debug\WIM_E_Flete.PersonaForm.resources
+C:\Users\Grover Irusta\documents\visual studio 2013\Projects\WIM-E Flete\WIM-E Flete\obj\Debug\WIM_E_Flete.Properties.Resources.resources
+C:\Users\Grover Irusta\documents\visual studio 2013\Projects\WIM-E Flete\WIM-E Flete\obj\Debug\WIM-E Flete.csproj.GenerateResource.Cache
+C:\Users\Grover Irusta\documents\visual studio 2013\Projects\WIM-E Flete\WIM-E Flete\obj\Debug\WIM-E Flete.exe
+C:\Users\Grover Irusta\documents\visual studio 2013\Projects\WIM-E Flete\WIM-E Flete\obj\Debug\WIM-E Flete.pdb
+C:\Users\Grover Irusta\documents\visual studio 2013\Projects\WIM-E Flete\WIM-E Flete\bin\Debug\WIM-E Flete.pdb
+C:\Users\Grover Irusta\documents\visual studio 2013\Projects\WIM-E Flete\WIM-E Flete\obj\Debug\WIM-E Flete.csprojResolveAssemblyReference.cache
+C:\Users\Grover Irusta\documents\visual studio 2013\Projects\WIM-E Flete\WIM-E Flete\obj\Debug\WIM-E Flete.csproj.ResolveComReference.cache
+C:\Users\Eduardo Irusta\Documents\WIM-E Flete - copia\WIM-E Flete\obj\Debug\Interop.WinInetConnectorLib.dll
+C:\Users\Eduardo Irusta\Documents\WIM-E Flete - copia\WIM-E Flete\obj\Debug\WIM-E Flete.csproj.ResolveComReference.cache
+C:\Users\Eduardo Irusta\Documents\WIM-E Flete - copia\WIM-E Flete\obj\Debug\WIM_E_Flete.FechaPedidoForm.resources
+C:\Users\Eduardo Irusta\Documents\WIM-E Flete - copia\WIM-E Flete\obj\Debug\WIM_E_Flete.Form1.resources
+C:\Users\Eduardo Irusta\Documents\WIM-E Flete - copia\WIM-E Flete\obj\Debug\WIM_E_Flete.ItemForm.resources
+C:\Users\Eduardo Irusta\Documents\WIM-E Flete - copia\WIM-E Flete\obj\Debug\WIM_E_Flete.listaEmpaqueForm.resources
+C:\Users\Eduardo Irusta\Documents\WIM-E Flete - copia\WIM-E Flete\obj\Debug\WIM_E_Flete.PedidoForm.resources
+C:\Users\Eduardo Irusta\Documents\WIM-E Flete - copia\WIM-E Flete\obj\Debug\WIM_E_Flete.PedidoProductoForm.resources
+C:\Users\Eduardo Irusta\Documents\WIM-E Flete - copia\WIM-E Flete\obj\Debug\WIM_E_Flete.PersonaForm.resources
+C:\Users\Eduardo Irusta\Documents\WIM-E Flete - copia\WIM-E Flete\obj\Debug\WIM_E_Flete.Properties.Resources.resources
+C:\Users\Eduardo Irusta\Documents\WIM-E Flete - copia\WIM-E Flete\obj\Debug\WIM-E Flete.csproj.GenerateResource.Cache
+C:\Users\Eduardo Irusta\Documents\WIM-E Flete - copia\WIM-E Flete\bin\Debug\WIM-E Flete.exe.config
+C:\Users\Eduardo Irusta\Documents\WIM-E Flete - copia\WIM-E Flete\bin\Debug\WIM-E Flete.exe
+C:\Users\Eduardo Irusta\Documents\WIM-E Flete - copia\WIM-E Flete\bin\Debug\WIM-E Flete.pdb
+C:\Users\Eduardo Irusta\Documents\WIM-E Flete - copia\WIM-E Flete\obj\Debug\WIM-E Flete.exe
+C:\Users\Eduardo Irusta\Documents\WIM-E Flete - copia\WIM-E Flete\obj\Debug\WIM-E Flete.pdb
+C:\Users\Eduardo Irusta\Documents\WIM-E Flete - copia\WIM-E Flete\obj\Debug\WIM-E Flete.csprojResolveAssemblyReference.cache
