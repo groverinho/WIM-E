@@ -13,7 +13,7 @@ namespace WIM_E_Flete
         private SqlConnection Conex;
         private SqlDataAdapter Adaptador;
         private SqlCommand Comando;
-        public  static string cadena = @"Data Source=EDUARDOIRUSTA ;Initial Catalog=FleteCamion;Integrated Security=True";
+        public  static string cadena = @"Data Source=DESKTOP-A3MU37I ;Initial Catalog=FleteCamion;Integrated Security=True";
         public Conexion()
         {
             Conex = new SqlConnection(cadena);

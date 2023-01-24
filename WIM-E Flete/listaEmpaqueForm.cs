@@ -55,7 +55,8 @@ namespace WIM_E_Flete
             excel.Cells[1, 5].Borders.Color = Color.Black;
             excel.Cells[1, 5].HorizontalAlignment = Constants.xlCenter;
             excel.Cells[1, 2].EntireRow.Font.Bold = true;
-            foreach (DataRow item in conex.Seleccionar("select CAST(lpp.numeroBulto AS  decimal) as 'nroBulto', lpp.cantidad as cantidad,lpp.tipoCantidad as descripcion, pr.nombre as producto , per.nombre+' '+per.apellidos as cliente from ListaPedidoPersona lpp, Pedido p , Producto pr , FechaPedido f ,Persona per where lpp.idListaPedidoPersona  = p.id and pr.id = lpp.idProducto and f.Id = p.IdFechaPedido and p.idPersona = per.id and p.IdFechaPedido ="+idFechaPedido+" order by  1").Tables[0].Rows)
+            string auxNroBult = "#";
+            foreach (DataRow item in conex.Seleccionar("select CONVERT(decimal(12,1), REPLACE(lpp.numeroBulto, ',', '.')) AS numeroBulto , lpp.cantidad as cantidad,lpp.tipoCantidad as descripcion, pr.nombre as producto , per.nombre+' '+per.apellidos as cliente from ListaPedidoPersona lpp, Pedido p , Producto pr , FechaPedido f ,Persona per where lpp.idListaPedidoPersona  = p.id and pr.id = lpp.idProducto and f.Id = p.IdFechaPedido and p.idPersona = per.id and p.IdFechaPedido =" + idFechaPedido + " order by  1").Tables[0].Rows)
             {//0 es nro bulto - 1 es cantidad - 2 es descripcion (docena unidad) -  3 es producto - 4 es cliente
             //    string cliente = item[4].ToString();
             /*    if (!item[4].ToString().Equals(excel.Cells[i - 1, 5]))
@@ -65,8 +66,14 @@ namespace WIM_E_Flete
                     excel.Cells[i, 6].HorizontalAlignment = Constants.xlCenter;
           /*          i++;
                 }*/
-                string nroBulto = item[0].ToString();
-                excel.Cells[i, 2] = nroBulto;
+                    double test = Math.Floor(Double.Parse(item[0].ToString()));
+                    if (!(test+"").Equals(auxNroBult))
+                    {
+                        auxNroBult = test+"";
+                         excel.Cells[i, 2] = auxNroBult;
+                     } else
+                         excel.Cells[i, 2] = "";
+
                 excel.Cells[i, 2].Borders.Color = Color.Black;
                 excel.Cells[i, 2].HorizontalAlignment = Constants.xlCenter;
 

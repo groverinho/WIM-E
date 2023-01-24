@@ -12,7 +12,7 @@ namespace WIM_E_Flete
         int cantidad ;
         double precioCantidad; 
         string tipoCantidad; 
-        string nroBulto;
+        Double nroBulto;
         Producto idProducto = new Producto();
         int idListaPedidoPersona;
         public int Id
@@ -30,7 +30,7 @@ namespace WIM_E_Flete
             get { return idProducto; }
             set { idProducto = value; }
         }
-        public string NroBulto
+        public Double NroBulto
         {
             get { return nroBulto; }
             set { nroBulto = value; }
@@ -59,7 +59,7 @@ namespace WIM_E_Flete
             {
                 ListaPedidoPersona lpp = new ListaPedidoPersona();
                 lpp.TipoCantidad = item["tipoCantidad"].ToString();
-                lpp.NroBulto = item["numeroBulto"].ToString();
+                lpp.NroBulto = Double.Parse(item["numeroBulto"].ToString().Replace(".",","));
                 lpp.Cantidad = Int32.Parse(item["cantidad"].ToString());
                 lpp.PrecioCantidad = Double.Parse(item["precioCantidad"].ToString());
                 lpp.IdProducto.Id = Int32.Parse(item["idProducto"].ToString());

@@ -35,7 +35,7 @@ namespace WIM_E_Flete
         List<ListaPedidoPersona> lista = new List<ListaPedidoPersona>();
         List<ListaPedidoPersona> lista2 = new List<ListaPedidoPersona>();
         double totalPrecio = 0;
-        string auxBulto;
+        double auxBulto;
         public static int auxIdPersona = 0, auxIdPedidoEnListaPedidoPersona=0;
         public static int idFechaPedido;
         public void MostrarFechaPedidos()
@@ -150,7 +150,7 @@ namespace WIM_E_Flete
 
         public static bool nroBultoValido(string nroBulto)
         {
-            Regex rgx = new Regex(@"^[0-9]+([.][0-9]+)?$");
+            Regex rgx = new Regex(@"^[0-9]+([,][0-9]+)?$");
             return rgx.IsMatch(nroBulto) ? true : false;
         }
 
@@ -164,7 +164,8 @@ namespace WIM_E_Flete
                         listaPedidoPersona.TipoCantidad = "docena";
                     else if (radioButtonUnidad.Checked)
                         listaPedidoPersona.TipoCantidad = "unidad";
-                    listaPedidoPersona.NroBulto = txtNroBulto.Text;
+
+                    listaPedidoPersona.NroBulto = Double.Parse(txtNroBulto.Text);
                     listaPedidoPersona.Cantidad = Int32.Parse(txtCantida.Text);
                     listaPedidoPersona.PrecioCantidad = (double)listaPedidoPersona.Cantidad * listaPedidoPersona.IdProducto.Precio;
                     lista.Add(listaPedidoPersona);
@@ -249,8 +250,8 @@ namespace WIM_E_Flete
             {
                 DataGridViewRow fila = dataGridViewPreLista.Rows[e.RowIndex];
          //       ListaPedidoPersona listaPedidoPersona = new ListaPedidoPersona();
-                auxBulto = fila.Cells["nrobulto"].Value + "";
-                txtNroBulto.Text = fila.Cells["nrobulto"].Value + "";
+                auxBulto = Double.Parse(fila.Cells["nrobulto"].Value+ "");
+                txtNroBulto.Text = (double)fila.Cells["nrobulto"].Value + "";
                 txtCantida.Text = fila.Cells["cantidad"].Value + "";
                 txtItem.Text = fila.Cells["producto1"].Value + "";
                 listaPedidoPersona.IdProducto.Id = Int32.Parse(fila.Cells["idproducto"].Value + "");
@@ -289,7 +290,7 @@ namespace WIM_E_Flete
                             listaPedidoPersona.TipoCantidad = "docena";
                         else if (radioButtonUnidad.Checked)
                             listaPedidoPersona.TipoCantidad = "unidad";
-                        listaPedidoPersona.NroBulto = txtNroBulto.Text;
+                        listaPedidoPersona.NroBulto = Double.Parse(txtNroBulto.Text);
                         listaPedidoPersona.Cantidad = Int32.Parse(txtCantida.Text);
                         listaPedidoPersona.PrecioCantidad = (double)listaPedidoPersona.Cantidad * listaPedidoPersona.IdProducto.Precio;
                         listaPedidoPersona.IdProducto.Nombre = txtItem.Text;
@@ -347,7 +348,7 @@ namespace WIM_E_Flete
                     {
                         string aux = item.PrecioCantidad.ToString();
                         aux = aux.Replace(",", ".");
-                        conex.Ejecutar("insert into ListaPedidoPersona values(" + auxIdPedidoEnListaPedidoPersona + "," + item.IdProducto.Id + ",'" + item.NroBulto + "'," + (double)item.Cantidad + "," + aux + ",'" + item.TipoCantidad + "')");
+                        conex.Ejecutar("insert into ListaPedidoPersona values(" + auxIdPedidoEnListaPedidoPersona + "," + item.IdProducto.Id + ",'" + (double)item.NroBulto + "'," + (double)item.Cantidad + "," + aux + ",'" + item.TipoCantidad + "')");
                     }
                     string aux2 = totalPrecio.ToString();
                     aux2 = aux2.Replace(",", ".");
@@ -494,16 +495,32 @@ namespace WIM_E_Flete
 
                 excel.Cells[2, 2].EntireRow.Font.Bold = true;
                 int indiceFila =1;
+                string auxNroBult = "#";
+
                 foreach (DataGridViewRow row in tabla.Rows) //Filas
                 {
                     indiceFila++;
                     IndiceColumna = 0;
+
                     foreach (DataGridViewColumn col in tabla.Columns)
                     {
                         if (col.Visible)
                         {
                             IndiceColumna++;
-                            excel.Cells[indiceFila + 1, IndiceColumna] = row.Cells[col.Name].Value;
+                            if (col.Name.Equals("nrobulto"))
+                            {
+                                double test = Math.Floor(Double.Parse(row.Cells[col.Name].Value.ToString()));
+                                if (!(test+"").Equals(auxNroBult))
+                                {
+                                    auxNroBult = test + "";
+                                    excel.Cells[indiceFila + 1, IndiceColumna] = auxNroBult;
+                                }
+                                else
+                                    excel.Cells[indiceFila + 1, IndiceColumna]= "";
+                            } else {
+                               excel.Cells[indiceFila + 1, IndiceColumna] = row.Cells[col.Name].Value;
+                            }
+
                             excel.Cells[indiceFila + 1, IndiceColumna].Borders.Color = Color.Black;
                             oRange.Columns.AutoFit();
                         }
